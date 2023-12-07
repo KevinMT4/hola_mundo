@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'store/productstyle.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'view_cart' %}">Carrito</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main align="center">
+        <section id="home">
+            <img src="../../static/tiends.jpg" height="80px">
+             <h1>Bienvenidos a Nuestra Tienda</h1>
+            <p>Explora nuestra amplia gama de productos.</p>
+        </section>
+
+        <section id="products">
+          <h2>Nuestros Productos</h2>
+          <div class="product-grid">
+              {% for product in products %}
+              <div class="product-card">
+                  <h3>{{ product.name }}</h3>
+                  <p>{{ product.description }}</p>
+                  <span class="price">${{ product.price }}</span>
+                  <!-- Puedes agregar más detalles o botones de acción aquí -->
+              </div>
+              {% endfor %}
+          </div>
+      </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <!-- Información de contacto aquí -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tienda en Línea</p>
+    </footer>
+</body>
+</html>
