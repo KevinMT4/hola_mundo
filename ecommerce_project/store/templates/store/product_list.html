@@ -19,7 +19,7 @@
         </nav>
     </header>
 
-    <main align="center">
+    <main align="centerº">
         <section id="home">
             <img src="../../static/tiends.jpg" height="80px">
              <h1>Bienvenidos a Nuestra Tienda</h1>
@@ -34,6 +34,9 @@
                   <h3>{{ product.name }}</h3>
                   <p>{{ product.description }}</p>
                   <span class="price">${{ product.price }}</span>
+                  <a href="{% url 'add_product' %}" class="btn btn-success">Agregar Nuevo Producto</a>
+                  <a href="{% url 'delete_product' product.id %}" class="delete-btn">Eliminar Producto</a>
+                  
                   <!-- Puedes agregar más detalles o botones de acción aquí -->
               </div>
               {% endfor %}

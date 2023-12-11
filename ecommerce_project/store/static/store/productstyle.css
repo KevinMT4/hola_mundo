@@ -15,9 +15,10 @@ body {
 .product-item {
     background-color: #ffffff;
     border: 1px solid #e1e1e1;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: auto;
+    margin-bottom: 10px;    
     border-radius: 8px;
+    height: 40px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -114,3 +115,31 @@ footer {
 }
 
 /* ... (otros estilos) ... */
+.delete-btn {
+    background-color: red;
+    color: white;
+    padding: auto;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+/* En tu archivo CSS, por ejemplo, static/styles.css */
+
+.btn-success {
+    background-color: green;
+    color: white;
+    padding: auto;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-product-btn:hover {
+    background-color: darkgreen;
+}
